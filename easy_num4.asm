@@ -1,0 +1,10 @@
+.ORIG X3000
+
+LEA R0, VAR
+PUTS
+
+	HALT
+
+VAR .FILL x41
+
+.END

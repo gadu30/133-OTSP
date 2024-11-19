@@ -1,0 +1,19 @@
+.ORIG x3000
+
+	AND R0, R0, #0
+	LD R0, NUM
+	LD R1, COUNTER
+
+	LOOP
+		TRAP x21
+		ADD R0, R0, #1
+		ADD R1, R1, #-1
+		BRp LOOP
+
+	HALT
+
+NUM .FILL x30
+COUNTER .FILL #10
+
+.END
+
